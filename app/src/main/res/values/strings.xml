@@ -6,6 +6,9 @@
     <string name="add">add</string>
     <string name="area">area</string>
     <string name="enter_area">enter area</string>
+    <string name="address">address</string>
+    <string name="phone">phone</string>
+    <string name="imgname">imgname</string>
     <string-array name="fruits">
         <item>apple</item>
         <item>banana</item>

@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -13,10 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.Map;
 
 public class SimpleTwoLineList extends AppCompatActivity {
     private final Boolean           D = true;
@@ -62,7 +58,9 @@ public class SimpleTwoLineList extends AppCompatActivity {
 
 
         //List 생성 및 관리 Adapter
-        adapter = new SimpleAdapter(SimpleTwoLineList.this, arrDatas, R.layout.simple, new String[]{"name", "area"}, new int[]{R.id.text1, R.id.text2});
+        adapter = new SimpleAdapter(SimpleTwoLineList.this, arrDatas,
+                                            R.layout.simple, new String[]{"name", "area"},
+                                            new int[]{R.id.nameTXT, R.id.phoneTXT});
         //SimpleAdpater(이 액티비티에, 데이터를, 어떤 형식의 레이아웃에, 어떤 데이터를, 어디에다 넣을 것인지)
 
         // ListView에 List 설정
@@ -75,7 +73,7 @@ public class SimpleTwoLineList extends AppCompatActivity {
                 // TextView가 두 개라 이렇게 적으면 안된다. 찾아야함
                 //Toast.makeText(twoLineList.this, "Text: "+(((TextView)view).getText())+", position: "+position + ", id: " + id, Toast.LENGTH_SHORT).show();
                 //Toast.makeText(SimpleTwoLineList.this, "Text: "+ ((TextView)findViewById(R.id.text2)).getText()+", position: "+position + ", id: " + id, Toast.LENGTH_SHORT).show();
-                Toast.makeText(SimpleTwoLineList.this, "Name: "+ ((TextView)findViewById(R.id.text1)).getText() + ", area: "+ ((TextView)findViewById(R.id.text2)).getText()+", position: "+position + ", id: " + id, Toast.LENGTH_SHORT).show();
+                Toast.makeText(SimpleTwoLineList.this, "Name: "+ ((TextView)findViewById(R.id.nameTXT)).getText() + ", area: "+ ((TextView)findViewById(R.id.phoneTXT)).getText()+", position: "+position + ", id: " + id, Toast.LENGTH_SHORT).show();
             }
         });
     }
