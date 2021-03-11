@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">ExamList</string>
+    <string name="name">name</string>
+    <string name="check_msg">checke</string>
+    <string name="entername">enter name</string>
+    <string name="add">add</string>
     <string-array name="fruits">
         <item>apple</item>
         <item>banana</item>
