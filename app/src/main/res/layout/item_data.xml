@@ -33,6 +33,9 @@
         android:id="@+id/iconIMG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/imgname"
+        android:maxWidth="25dp"
+        android:maxHeight="25dp"
         app:srcCompat="@drawable/ic_launcher_background" />
 </LinearLayout>
