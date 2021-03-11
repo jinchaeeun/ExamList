@@ -31,7 +31,7 @@ public class DynamicList extends AppCompatActivity {
     private ArrayList<String>       arrDatas;
     private ArrayAdapter<String>    adapter;
 
-    private InputMethodManager imm;
+   // private InputMethodManager imm;
 
     //Member Method - Activity's Override -----------------------
     @Override
@@ -59,7 +59,7 @@ public class DynamicList extends AppCompatActivity {
         //한번에 넣는 법
         Collections.addAll(arrDatas, this.getResources().getStringArray(R.array.fruits));
         //1개 넣는 법
-        //arrDatas.add("Test");
+        arrDatas.add("Test");
 
         //List 생성
         adapter = new ArrayAdapter<String>(this, 
