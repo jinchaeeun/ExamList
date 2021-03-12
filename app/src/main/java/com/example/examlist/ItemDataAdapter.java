@@ -4,12 +4,15 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -92,11 +95,15 @@ public class ItemDataAdapter extends ArrayAdapter<ItemData> {   //에러 표시�
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(),item.getImgResId());
         bitmap = bitmap.createScaledBitmap(bitmap, 100, 100, true);
         iconIMG.setImageBitmap(bitmap);
+
         /*
         return super.getView(position, convertView, parent); //만약에 한 줄을 주고 그리라고 했는데 내가 못 그리겠으면 super에서 그려주는 것.
         // java 코드 객체를 xml에서 만들어주는 뷰 convertView가 반환될 것임
         // 내가 처리해줄거면
         */
+
+
         return convertView;
     }
+
 }

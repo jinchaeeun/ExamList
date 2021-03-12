@@ -3,7 +3,13 @@ package com.example.examlist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -39,5 +45,23 @@ public class CustomActivity extends AppCompatActivity {
         adapter = new ItemDataAdapter(this, R.layout.item_data, dataArrays); //view랑 data 줌
 
         dataLST.setAdapter(adapter);
+
     }
+
+    //클릭하면 로그 출력
+    public void itemClick(View v){
+         if(D) Log.i(TAG, "itemClick");
+        switch (v.getId()){
+            case R.id.nameTXT:
+            case R.id.phoneTXT:
+            case R.id.addressTXT:
+                Log.i(TAG, "TEXT => "+((TextView)v).getText());
+                break;
+            case R.id.iconIMG:
+                Log.i(TAG, "image => " + ((ImageView)v).getContentDescription());
+                break;
+        }
+    }
+
+
 }
